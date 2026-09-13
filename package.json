@@ -1,0 +1,7 @@
+{
+  "name": "error-as-value",
+  "description": "Handle errors as values",
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module"
+}
