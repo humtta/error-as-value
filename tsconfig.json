@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2025",
+    "lib": ["ES2025"],
+
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    "rootDir": "src",
+    "outDir": "dist",
+
+    "strict": true,
+    "skipLibCheck": true
+  },
+
+  "include": ["src"]
+}
