@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "type": "module",
+
   "devDependencies": {
     "@biomejs/biome": "^2.5.13"
   }
