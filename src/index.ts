@@ -1,3 +1,5 @@
+export type Result<T, E = Error> = Ok<T> | Err<E>;
+
 export interface Ok<T> {
   readonly ok: true;
   readonly value: T;
