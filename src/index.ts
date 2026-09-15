@@ -17,3 +17,18 @@ export function ok<T>(value: T): Ok<T> {
 export function err<E>(error: E): Err<E> {
   return { ok: false, error };
 }
+
+export function attempt<T>(
+  fn: () => T | Promise<T>,
+): Result<T, Error> | Promise<Result<T, Error>> {
+  try {
+    const value = fn();
+    return value instanceof Promise ? value.then(ok, toErr) : ok(value);
+  } catch (caught) {
+    return toErr(caught);
+  }
+}
+
+function toErr(caught: unknown): Result<never, Error> {
+  return err(caught instanceof Error ? caught : new Error(String(caught)));
+}
