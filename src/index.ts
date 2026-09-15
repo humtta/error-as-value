@@ -18,6 +18,9 @@ export function err<E>(error: E): Err<E> {
   return { ok: false, error };
 }
 
+export function attempt<T>(fn: () => Promise<T>): Promise<Result<T, Error>>;
+export function attempt<T>(fn: () => T): Result<T, Error>;
+
 export function attempt<T>(
   fn: () => T | Promise<T>,
 ): Result<T, Error> | Promise<Result<T, Error>> {
